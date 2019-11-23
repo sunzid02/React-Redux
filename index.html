@@ -24,33 +24,31 @@
                 age: 30
             }
 
-            handleClick = (e) => {
-                console.log(this.state);
+            handleChange = (e) =>{
 
                 this.setState({
-                    name: 'Zayed'
+                    name: e.target.value
                 });
+            }
+
+            handleSubmit = (e)  => {
+                e.preventDefault();
+                
+                console.log('form submitted by ' , this.state.name);
                 
             }
-            handleMouseOver = (e) => {
-                console.log(e.target,   e.pageX);            
-            }
-            handleCopy = (e) => {
-                alert('Ar koto copy korbi re...........');            
-            }
+        
 
             render() {
                 return(
                     <div className="app-content">
-                        <h3> Hey sunzid </h3>
-                        <p> His name is { this.state.name } </p>
+                        <h1> His name is { this.state.name } </h1>
 
-                        <button onClick={   this.handleClick   }> Click me </button>
-
-                        <button onMouseOver={   this.handleMouseOver    }> Hover me </button>
-
-                        <p onCopy={ this.handleCopy }> What I've done </p>
-
+                        <form onSubmit={ this.handleSubmit }>
+                            <input type="text" onChange={ this.handleChange } name="" id="" />
+                            <button>    Submit  </button>
+                        </form>
+                        
                     </div>
                 )
 
