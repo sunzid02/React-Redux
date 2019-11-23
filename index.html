@@ -24,11 +24,29 @@
                 age: 30
             }
 
+            handleClick(e){
+                console.log(e.target);
+                
+            }
+            handleMouseOver(e){
+                console.log(e.target,   e.pageX);            
+            }
+            handleCopy(e){
+                alert('Ar koto copy korbi re...........');            
+            }
+
             render() {
                 return(
                     <div className="app-content">
-                        <h3> Hey sunzida, joss tppa </h3>
+                        <h3> Hey sunzid </h3>
                         <p> His name is { this.state.name } </p>
+
+                        <button onClick={   this.handleClick   }> Click me </button>
+
+                        <button onMouseOver={   this.handleMouseOver    }> Hover me </button>
+
+                        <p onCopy={ this.handleCopy }> What I've done </p>
+
                     </div>
                 )
 
