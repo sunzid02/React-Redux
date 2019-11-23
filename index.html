@@ -24,14 +24,18 @@
                 age: 30
             }
 
-            handleClick(e){
-                console.log(e.target);
+            handleClick = (e) => {
+                console.log(this.state);
+
+                this.setState({
+                    name: 'Zayed'
+                });
                 
             }
-            handleMouseOver(e){
+            handleMouseOver = (e) => {
                 console.log(e.target,   e.pageX);            
             }
-            handleCopy(e){
+            handleCopy = (e) => {
                 alert('Ar koto copy korbi re...........');            
             }
 
