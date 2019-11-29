@@ -2,14 +2,28 @@ import React, { Component } from 'react';
 
 class Ninjas extends Component{
     render(){
+        console.log(this.props);
+        const { name, age, belt } = this.props;
         return(
             <div className="ninja">  
-                <div> Name: Sunzid </div>
-                <div> Age: 25 </div>
-                <div> Belt: Blue </div>
+                <div> Name: { name } </div>
+                <div> Age: { age } </div>
+                <div> Belt: { belt } </div>
             </div>
         )
     } 
 }
 
 export default Ninjas;
+
+
+/**
+ * 
+ *  props means from parent component, u can pass data 
+ *  to child component
+ * 
+ * 
+ * destructuring means pass props data and install them in
+ * variables
+ * 
+*/

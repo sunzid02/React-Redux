@@ -9,7 +9,7 @@ function App() {
       <h1>  Let the fun begin  </h1>
       <p>  Booyah  </p>
 
-      <Ninjas />
+      <Ninjas name="zia" age="25" belt="black" />
     </div>
   );
 }
