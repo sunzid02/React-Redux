@@ -1,12 +1,6 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class Ninjas extends Component{
-    render(){
-        console.log(this.props);
-        const { ninjas } = this.props;
-        const { game } = this.props;
-        // const  ninjas  = this.props.ninjas;
-
+const Ninjas =  ({ ninjas, game }) => {
         const ninjaList =   ninjas.map( ninja =>    {
             return  (
                 <div className="ninja" key={    ninja.id }>
@@ -24,10 +18,8 @@ class Ninjas extends Component{
         return(
             <div className="ninja-list">
                 {   ninjaList  }
-                <h3> {  game  } </h3>
             </div>
         )
-    } 
 }
 
 export default Ninjas;
